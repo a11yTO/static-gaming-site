@@ -23,6 +23,8 @@ $heading-font-stack: "League Spartan", "Open Sans", sans-serif;
 $link-color: $secondary-color;
 $link-underline: 2px solid $brand-color;
 
+$logo-width: 16em;
+
 $main-nav-mid-breakpoint: 25em;
 $main-nav-wide-breakpoint: 40em;
 
@@ -204,9 +206,14 @@ a:focus {
 }
 .branding {
   height: auto;
-  padding: 6px 0;
   padding: 0.33em 0;
-  width: 16em;
+  width: $logo-width;
+}
+@media screen and (min-width: 0) {
+  .branding {
+    width: auto;
+    max-width: $logo-width;
+  }
 }
 .nav-menu {
   margin: 0;
