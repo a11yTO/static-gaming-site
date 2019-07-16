@@ -25,8 +25,8 @@ $link-underline: 2px solid $brand-color;
 
 $logo-width: 16em;
 
-$main-nav-mid-breakpoint: 30em;
-$main-nav-wide-breakpoint: 50em;
+$main-nav-mid-breakpoint: 40em;
+$main-nav-wide-breakpoint: 60em;
 
 /* -------------------------------------------------------------------------
  * Global reset
@@ -186,6 +186,14 @@ a:focus {
     color: $main-font-color;
     border-bottom: 0;
     padding: 0.33em 0;
+  }
+  .tickets a {
+    background: $brand-color;
+    border-radius: 1.38em;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 0.44em 0.83em;
+    white-space: nowrap;
   }
 }
 .social-icons {
