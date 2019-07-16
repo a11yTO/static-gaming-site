@@ -16,7 +16,7 @@
 title: a11yTO Gaming
 email: info@a11yto.com
 description: A one day, single track unconference for accessible gaming!
-event-date: Saturday October 26th, 2019
+event-date: Saturday, October 26th, 2019
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gaming.a11yto.com/" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
