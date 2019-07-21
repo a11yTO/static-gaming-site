@@ -117,6 +117,9 @@ h1, h2, h3, h4, h5, h6 {
 .event-date {
   font-weight: bold;
 }
+.page-title {
+  margin-bottom: 0.5em;
+}
 .sponsorships h3 {
   font-size: $base-font-size*1.25;
   font-weight: 400;
@@ -341,7 +344,8 @@ article,
   }
 }
 .speaker-detail {
-  min-height: 11.11em;
+  margin-bottom: 3em;
+  min-height: 15em;
   position: relative;
   img {
     border-radius: 50%;
@@ -472,29 +476,29 @@ button {
 }
 
 /* -------------------------------------------------------------------------
- * #a11yTO.com Events structure & styles
- * ------------------------------------------------------------------------- */
- .events {
+* #a11yTO.com Branded Events structure & styles
+* ------------------------------------------------------------------------- */
+.branded-events {
   ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
+  text-align: center;
   }
   li {
-    float: left;
+    display: inline-block;
     list-style: none;
-    margin: 1em 0.5em;
+    margin: 0 0.5em 1.5em;
   }
   a {
     background: $meetups-brand-color;
+    border: none;
+    border-radius: 1.5em;
+    color: $inverted-font-color;
     display: block;
     font-weight: bold;
-    text-align: center;
-    border-radius: 1.5em;
-    border: none;
     padding: 0.75em;
-    width: 10em;
-    color: $inverted-font-color;
+    text-align: center;
+    width: 12em;
   }
   a.camp {
     background: $camp-brand-color;
@@ -505,38 +509,36 @@ button {
   a.irl {
     background: $irl-brand-color;
   }
+  a.gaming {
+    background: $gaming-brand-color;
+  }
 }
 @media screen and (min-width: 0) {
-  .events {
-    a {
-      width: 18em;
-    }
-  }
-  .events ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 55.55em) {
-  .events {
-    a {
-      width: 16em;
+  .branded-events {
+    ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0;
     }
   }
 }
-@media screen and (min-width: 55.55em) {
-  .events {
+@media screen and (min-width: 60em) {
+  .branded-events {
     a {
-      width: 10em;
+      width: 20em;
     }
   }
-} 
-/* End #a11yTO.com Events structure & styles */
+  .a11yweek.branded-events {
+    a {
+      width: 14em;
+    }
+  }
+}
+/* End #a11yTO.com Branded Events structure & styles */
 
 /* -------------------------------------------------------------------------
  * Staged site structure & styles
