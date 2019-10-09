@@ -503,8 +503,8 @@ button {
 * Playlist Styles
 * ------------------------------------------------------------------------- */
 .playlist-list {
-  border-left: 1px solid #025b9f;
-  padding: 0 20px;
+  border-left: 1px solid $brand-color;
+  padding: 0 1em;
   list-style: none;
 }
 .playlist-list .session,
@@ -522,24 +522,22 @@ button {
 .playlist-list .lunch:before {
   content: "";
   position: absolute;
-  left: -1.425em;
+  left: -1.3em;
   display: inline-block;
-  width: 16px;
+  width: 0.8em;
   height: 16px;
   border-radius: 50%;
-  top: 8px;
-}
-.session:before {
-  border: 1px solid #025b9f;
-  background-color: #025b9f;
+  top: 0.5em;
+  border: 1px solid $brand-color;
+  background-color: $brand-color;
 }
 .break:before,
 .lunch:before {
-  border: 1px solid #d44619;
-  background-color: #d44619;
+  border: 1px solid $conf-brand-color;
+  background-color: $conf-brand-color;
 }
 .playlist-list h3 {
-  color: #025b9f;
+  color: $brand-color;
   font-weight: 800;
   line-height: 30px;
   margin-bottom: 12px;
