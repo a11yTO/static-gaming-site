@@ -525,11 +525,25 @@ button {
   left: -1.3em;
   display: inline-block;
   width: 0.8em;
-  height: 16px;
+  height: 0.8em;
   border-radius: 50%;
-  top: 0.5em;
   border: 1px solid $brand-color;
   background-color: $brand-color;
+}
+.conf .playlist-list .session:before,
+.conf .playlist-list .break:before,
+.conf .playlist-list .lunch:before {
+  top: 0.45em;
+}
+.irl .playlist-list .session:before,
+.irl .playlist-list .break:before,
+.irl .playlist-list .lunch:before {
+  top: 0.2em;
+}
+.gaming .playlist-list .session:before,
+.gaming .playlist-list .break:before,
+.gaming .playlist-list .lunch:before {
+  top: 0.5em;
 }
 .break:before,
 .lunch:before {
@@ -539,8 +553,8 @@ button {
 .playlist-list h3 {
   color: $brand-color;
   font-weight: 800;
-  line-height: 30px;
-  margin-bottom: 12px;
+  line-height: 1.6em;
+  margin-bottom: 0.67em;
   text-transform: capitalize;
 }
 .playlist-list .event:before {
@@ -556,7 +570,7 @@ button {
 }
 .playlist-list .break,
 .playlist-list .lunch {
-  color: #d44619;
+  color: $brand-color;
   font-size: $base-font-size;
 }
 
