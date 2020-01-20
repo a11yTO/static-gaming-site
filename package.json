@@ -1,16 +1,16 @@
 {
-    "name": "a11yTO",
-    "title": "#a11yTO",
-    "description": "Accessibility Toronto",
+    "name": "a11yTO Gaming",
+    "title": "#a11yTO Gaming",
+    "description": "A one day, single track unconference for accessible gaming!",
     "version": "1.0.0",
-    "homepage": "https://a11yto.com/",
+    "homepage": "https://gaming.a11yto.com/",
     "author": {
         "name": "#a11yTO Team",
         "email": "info@a11yto.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/a11yTO/A11yTO-Main"
+        "url": "https://github.com/a11yTO/static-gaming-site"
     },
     "devDependencies": {
         "grunt": "^1.0.4",
