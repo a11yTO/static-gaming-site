@@ -253,11 +253,11 @@ a.current-page {
 }
 .branding-logo {
   height: auto;
-  width: 16em;
+  width: 15em;
 }
-@supports (max-width: 12em) {
+@supports (max-width: 15em) {
   .branding-logo {
-    max-width: 16em;
+    max-width: 14.65em;
     width: auto;
   } 
 }
@@ -350,7 +350,7 @@ a.current-page {
         align-self: flex-start;
       }
       .main-nav-menu .nav-list {
-        margin: 0.85em 0;
+        margin: 0.75em 0;
       }
     }
     .irl .main-nav-menu {
