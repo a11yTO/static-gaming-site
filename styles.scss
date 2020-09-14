@@ -253,13 +253,7 @@ a.current-page {
 }
 .branding-logo {
   height: auto;
-  width: 15em;
-}
-@supports (max-width: 15em) {
-  .branding-logo {
-    max-width: 14.65em;
-    width: auto;
-  } 
+  width: 14.65em;
 }
 .main-nav-menu {
   margin: 0.25em 0 0;
