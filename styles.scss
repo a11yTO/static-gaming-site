@@ -544,7 +544,7 @@ button {
   padding: 0 1em;
   list-style: none;
 }
-.playlist-list .session,
+.playlist-list .session-time,
 .playlist-list p {
   font-size: $base-font-size;
   margin: 0;
@@ -554,7 +554,7 @@ button {
   border: 0;
   margin-bottom: 1.5em;
 }
-.playlist-list .session:before,
+.playlist-list .session-time:before,
 .playlist-list .break:before,
 .playlist-list .lunch:before {
   content: "";
@@ -567,20 +567,15 @@ button {
   border: 1px solid $brand-color;
   background-color: $brand-color;
 }
-.conf .playlist-list .session:before,
+.conf .playlist-list .session-time:before,
 .conf .playlist-list .break:before,
 .conf .playlist-list .lunch:before {
   top: 0.45em;
 }
-.irl .playlist-list .session:before,
+.irl .playlist-list .session-time:before,
 .irl .playlist-list .break:before,
 .irl .playlist-list .lunch:before {
   top: 0.2em;
-}
-.gaming .playlist-list .session:before,
-.gaming .playlist-list .break:before,
-.gaming .playlist-list .lunch:before {
-  top: 0.5em;
 }
 .break:before,
 .lunch:before {
@@ -598,9 +593,6 @@ button {
   content: " ";
   display: block;
 }
-.playlist-list .time {
-  position: relative;
-}
 .playlist-list .speaker,
 .playlist-list .speakers {
   display: block;
@@ -609,6 +601,9 @@ button {
 .playlist-list .lunch {
   color: $brand-color;
   font-size: $base-font-size;
+}
+.speaker-list {
+  margin-left: -1em;
 }
 
 /* -------------------------------------------------------------------------
