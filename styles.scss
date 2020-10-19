@@ -605,6 +605,10 @@ button {
 .speaker-list {
   margin-left: -1em;
 }
+.speaker-list li,
+.talk h2 {
+  text-transform: capitalize;
+}
 
 /* -------------------------------------------------------------------------
 * Camp schedule table
