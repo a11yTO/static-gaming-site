@@ -21,9 +21,12 @@ $base-font-size: 112.5%;
 $main-font-stack: "Open Sans", sans-serif;
 $heading-font-stack: "League Spartan", "Open Sans", sans-serif;
 $link-color: $secondary-color;
+$link-underline: 2px solid $brand-color;
 
-$main-nav-mid-breakpoint: 46em;
-$main-nav-wide-breakpoint: 68em;
+$logo-height: 4em;
+
+$main-nav-mid-breakpoint: 44em;
+$main-nav-wide-breakpoint: 62em;
 
 /* -------------------------------------------------------------------------
  * Global reset
@@ -175,25 +178,32 @@ ol {
 /* -------------------------------------------------------------------------
  * Link styles
  * ------------------------------------------------------------------------- */
- a {
+a {
+  border-bottom: $link-underline;
   color: $link-color;
+  text-decoration: none;
+  &:hover,
   &:active {
+    border: 0;
     color: $secondary-color;
   }
 }
 *:focus,
 a:focus {
+  border: 0;
   outline: 2px solid black;
-  text-decoration: none;
 }
-.main-nav-menu {
+.current-page {
+  border: 0;
+  color: $secondary-color !important;
+  font-weight: bold;
+}
+
+.nav-menu {
   a {
     color: $main-font-color;
+    border-bottom: 0;
     padding: 0.33em;
-    text-decoration: none;
-  }
-  a.current-page {
-    text-decoration: underline;
   }
   .tickets a {
     background: $brand-color;
@@ -204,40 +214,12 @@ a:focus {
     white-space: nowrap;
   }
 }
-a.current-page {
-  color: $secondary-color;
-  font-weight: bold;
-  text-decoration: underline;
-}
 .social-icons {
   a {
     padding: 0.75em 0.25em 0;
   }
 }
-@supports (text-underline-offset: 0) {
-  a {
-    text-decoration-line: underline;
-    text-decoration-color: $brand-color;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.2em;
-  }
-  .main-nav-menu a,
-  .tickets a,
-  .branded-events a {
-    text-decoration-line: none;
-  }
-  .main-nav-menu a.current-page {
-    text-decoration-color: $brand-color; 
-  }
-  footer a.current-page {
-    text-decoration-line: none;
-  }
-  .staged a {
-    color: $inverted-font-color;
-    text-decoration-color: $inverted-font-color;
-  }
-}
-/* End link styles */
+ /* End link styles */
 
 /* -------------------------------------------------------------------------
  * Page structure & styles
@@ -245,31 +227,23 @@ a.current-page {
 .site-header {
   background: $background;
   border-bottom: 3px solid $brand-color;
-  padding: 1.25em 5%;
+  padding: 1em 5% 0.65em;
   text-align: center;
 }
 .branding {
-  font-size: $base-font-size;
+  height: $logo-height;
+  padding: 0.33em 0;
+  width: auto;
 }
-.branding-logo {
-  height: auto;
-  width: 14.65em;
-}
-.main-nav-menu {
-  margin: 0.25em 0 0;
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      list-style: none;
-      margin: 0 0.25em 1em;
-    }
-    .tickets {
-      margin: 1.5em 0 1.75em;
-    }
-    .social {
-      margin: 0;
-    }
+.nav-menu {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0 0.25em 1em;
+  }
+  .tickets {
+    margin: 0.75em 0 1.75em;
   }
 }
 .social-icons {
@@ -281,7 +255,6 @@ a.current-page {
   }
   .twitter-icon,
   .facebook-icon,
-  .youtube-icon,
   .instagram-icon,
   .linkedin-icon {
     background: $background;
@@ -292,63 +265,52 @@ a.current-page {
 }
 @supports (flex-wrap: wrap) {
   .site-header {
+    text-align: center;
+  }
+  .nav-menu,
+  .social-icons {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
   }
-  .main-nav-menu .nav-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .tickets {
-      margin-top: 0.5em;
-    }
-    .social-icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      li {
-        display: block;
-        margin-bottom: 0;
-        padding: 0 0.2em;
-      }
-    }
+  .social-icons {
+    flex-direction: row;
   }
   @media screen and (min-width: $main-nav-mid-breakpoint) {
-    .site-header {
-      padding-bottom: 0.75em;
-    }
-    .branding {
-      padding-bottom: 0.75em;
-    }
-    .main-nav-menu .nav-list {
+    .nav-menu {
       flex-direction: row;
+      justify-content: center;
+      padding: 1em 0;
+      li {
+        margin: 0 0.75em;
+      }
       .tickets {
         margin: 0 0.5em;
       }
     }
     .social-icons {
       margin: 0;
+      li {
+        margin: 0 0.25em;
+      }
     }
   }
   @media screen and (min-width: $main-nav-wide-breakpoint) {
     .site-header {
-      padding-bottom: 0.65em;
+      text-align: left;
     }
-    .branding {
-      padding: 0;
+    .main-navigation {
+      float: right;
     }
-    .site-header {
-      flex-direction: row;
-      justify-content: space-between;
-      .branding {
-        align-self: flex-start;
-      }
-      .main-nav-menu .nav-list {
-        margin: 0.75em 0;
-      }
+    .nav-menu {
+      justify-content: flex-end;
     }
-    .irl .main-nav-menu {
+    .irl .nav-menu {
       padding: 1.8em 0;
     }
   }
@@ -375,12 +337,12 @@ article,
   padding: 1.5em 5%;
   width: 1000px;
 }
-// .irl .home .sponsorships,
-// .conf .home .sponsorships,
-// .gaming .home .sponsorships,
-// .camp .home .sponsorships {
-//   margin-top: -1.5em;
-// }
+.irl .home .sponsorships,
+.conf .home .sponsorships,
+.gaming .home .sponsorships,
+.camp .home .sponsorships {
+  margin-top: -1.5em;
+}
 @media screen and (min-width: 0) {
   article,
   .travel,
@@ -488,7 +450,7 @@ article,
   font-weight: bold;
 }
 footer {
-  padding: 0.25em 5% 1em;
+  padding: 0.25em 5%;
 } 
 /* End page structure & styles */
 
@@ -545,7 +507,7 @@ button {
   padding: 0 1em;
   list-style: none;
 }
-.playlist-list .session-time,
+.playlist-list .session,
 .playlist-list p {
   font-size: $base-font-size;
   margin: 0;
@@ -555,7 +517,7 @@ button {
   border: 0;
   margin-bottom: 1.5em;
 }
-.playlist-list .session-time:before,
+.playlist-list .session:before,
 .playlist-list .break:before,
 .playlist-list .lunch:before {
   content: "";
@@ -568,12 +530,12 @@ button {
   border: 1px solid $brand-color;
   background-color: $brand-color;
 }
-.conf .playlist-list .session-time:before,
+.conf .playlist-list .session:before,
 .conf .playlist-list .break:before,
 .conf .playlist-list .lunch:before {
   top: 0.45em;
 }
-.irl .playlist-list .session-time:before,
+.irl .playlist-list .session:before,
 .irl .playlist-list .break:before,
 .irl .playlist-list .lunch:before {
   top: 0.2em;
@@ -594,6 +556,9 @@ button {
   content: " ";
   display: block;
 }
+.playlist-list .time {
+  position: relative;
+}
 .playlist-list .speaker,
 .playlist-list .speakers {
   display: block;
@@ -602,13 +567,6 @@ button {
 .playlist-list .lunch {
   color: $brand-color;
   font-size: $base-font-size;
-}
-.speaker-list {
-  margin-left: -1em;
-}
-.speaker-list li,
-.talk h2 {
-  text-transform: capitalize;
 }
 
 /* -------------------------------------------------------------------------
@@ -736,27 +694,27 @@ button {
 /* -------------------------------------------------------------------------
  * Staged site structure & styles
  * ------------------------------------------------------------------------- */
-.staged,
-.attention {
-  background: black;
-  color: $inverted-font-color;
-  font-size: 75%;
-  line-height: 1.1;
-  margin: 0;
-  padding: 0.5em;
-  text-align: center;
-  width: 100%;
-}
-.attention {
-  background: $attention;
-}
-.staged a,
-.attention a {
-  color: $inverted-font-color;
-  text-decoration-color: $inverted-font-color;
-}
-.staged a:focus,
-.attention a:focus {
-  text-decoration: none;
-  outline: 2px solid white;
-}
+ .staged,
+ .attention {
+   background: black;
+   color: $inverted-font-color;
+   font-size: 75%;
+   line-height: 1.1;
+   margin: 0;
+   padding: 0.5em;
+   text-align: center;
+   width: 100%;
+ }
+ .attention {
+   background: $attention;
+ }
+ .staged a,
+ .attention a {
+   color: $inverted-font-color;
+   text-decoration-color: $inverted-font-color;
+ }
+ .staged a:focus,
+ .attention a:focus {
+   text-decoration: none;
+   outline: 2px solid white;
+ }
