@@ -701,7 +701,7 @@ button {
    font-size: 75%;
    line-height: 1.1;
    margin: 0;
-   padding: 0.5em;
+   padding: 1em;
    text-align: center;
    width: 100%;
  }
@@ -710,8 +710,8 @@ button {
  }
  .staged a,
  .attention a {
+   border-color: #fff;
    color: $inverted-font-color;
-   text-decoration-color: $inverted-font-color;
  }
  .staged a:focus,
  .attention a:focus {
