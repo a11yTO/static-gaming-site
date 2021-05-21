@@ -33,13 +33,13 @@
       <nav id="site-navigation" class="main-nav-menu">
         <ul class="nav-list">
           <li>
-            <a {% if page.id=='home' %}class="current-page" {% endif %} href="/">Home</a>
+            <a {% if page.id=='home' %}aria-current="page"{% endif %} href="/">Home</a>
           </li>
           <!-- <li>
-            <a {% if page.id == 'playlist' %}class="current-page" {% endif %} href="/playlist">Playlist</a>
+            <a {% if page.id == 'playlist' %}aria-current="page"{% endif %} href="/playlist">Playlist</a>
           </li>
           <li>
-            <a {% if page.id == 'talks' %}class="current-page" {% endif %} href="/talks">Talks</a>
+            <a {% if page.id == 'talks' %}aria-current="page"{% endif %} href="/talks">Talks</a>
           </li>
           <li class="tickets">
             <a href="#" target="_blank">Get Tickets</a>
