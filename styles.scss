@@ -44,13 +44,6 @@ $main-nav-wide-breakpoint: 68em;
   clear: both;
   height: 0;
 }
-* html .clearfix {
-  zoom: 1;
-} /* IE6 */
-*:first-child + html .clearfix {
-  zoom: 1;
-} /* IE7 */
-
 html,
 body {
   margin: 0;
