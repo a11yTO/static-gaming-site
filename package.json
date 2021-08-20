@@ -1,20 +1,7 @@
 {
-  "name": "a11yTOGaming",
-  "title": "#a11yTOGaming",
-  "description": "A one day, single track unconference for accessible gaming!",
-  "version": "1.0.0",
-  "homepage": "https://gaming.a11yto.com/",
-  "author": {
-    "name": "#a11yTO Team",
-    "email": "info@a11yto.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/a11yTO/static-gaming-site"
-  },
   "devDependencies": {
-    "grunt": "^1.3.0",
-    "grunt-contrib-sass": "^1.0.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-sass": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0"
   }
 }
