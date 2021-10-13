@@ -22,8 +22,8 @@ $main-font-stack: "Open Sans", sans-serif;
 $heading-font-stack: "League Spartan", "Open Sans", sans-serif;
 $link-color: $secondary-color;
 
-$main-nav-mid-breakpoint: 46em;
-$main-nav-wide-breakpoint: 68em;
+$main-nav-mid-breakpoint: 54em;
+$main-nav-wide-breakpoint: 70em;
 
 /* -------------------------------------------------------------------------
  * Global reset
@@ -44,6 +44,7 @@ $main-nav-wide-breakpoint: 68em;
   clear: both;
   height: 0;
 }
+
 html,
 body {
   margin: 0;
@@ -171,17 +172,38 @@ ol {
 /* -------------------------------------------------------------------------
  * Link styles
  * ------------------------------------------------------------------------- */
- a {
+a {
   color: $link-color;
   &:active {
     color: $secondary-color;
   }
 }
-*:focus,
-a:focus {
-  outline: 2px solid black;
+*:focus {
+  outline: 2px solid #000;
   outline-offset: 3px;
   text-decoration: none;
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+*:focus-visible {
+  outline: max(2px, 0.175em) solid #000;
+  outline-offset: 3px;
+  text-decoration: none;
+}
+.skip-link {
+  background-color: #fff;
+  padding: 0.25em 0.65em;
+  position: absolute;
+  top: 1em;
+  left: -9999em;
+  z-index: 10000;
+  &:focus {
+    left: 1em;
+    outline-offset: 0;
+    text-decoration: underline;
+    text-decoration-color: $brand-color;
+  }
 }
 .main-nav-menu {
   a {
@@ -189,7 +211,7 @@ a:focus {
     padding: 0.33em;
     text-decoration: none;
   }
-  a[aria-current]{
+  a[aria-current] {
     text-decoration: underline;
   }
   .tickets a {
@@ -197,11 +219,11 @@ a:focus {
     border-radius: 1.38em;
     color: #fff !important;
     font-weight: bold;
-    padding: 0.44em 0.83em;
+    padding: 0.44em 1.25em;
     white-space: nowrap;
   }
 }
-a[aria-current]{
+a[aria-current] {
   color: $secondary-color;
   font-weight: bold;
   text-decoration: underline;
@@ -209,6 +231,24 @@ a[aria-current]{
 .social-icons {
   a {
     padding: 0.75em 0.25em 0;
+  }
+}
+.register a {
+  background: #fff;
+  border-radius: 1.5em;
+  color: $brand-color !important;
+  font-weight: bold;
+  // padding: 0.15em 0.65em 0.25em;
+  padding: 0.44em 1.25em;
+  text-decoration: none;
+  white-space: nowrap;
+  &:focus {
+    outline-color: #fff;
+  }
+}
+@media screen and (min-width: $main-nav-wide-breakpoint) {
+  .register a {
+    padding: 0.15em 0.65em 0.25em;
   }
 }
 @supports (text-underline-offset: 0) {
@@ -223,10 +263,10 @@ a[aria-current]{
   .branded-events a {
     text-decoration-line: none;
   }
-  .main-nav-menu a[aria-current]{
-    text-decoration-color: $brand-color; 
+  .main-nav-menu a[aria-current] {
+    text-decoration-color: $brand-color;
   }
-  footer a[aria-current]{
+  footer a[aria-current] {
     text-decoration-line: none;
   }
   .staged a {
