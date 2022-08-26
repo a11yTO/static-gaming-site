@@ -44,10 +44,10 @@
           </li>
           <li>
             <a {% if page.id == 'speakers' %}aria-current="page"{% endif %} href="/speakers">Speakers</a>
-          </li>
-          <li class="tickets">
-            <a href="#">Get Tickets</a>
           </li> -->
+          <li class="tickets">
+            <a href="#">Buy Tickets</a>
+          </li>
           <li class="social">
             <ul class="social-icons">
               <li><a href="https://twitter.com/a11yto" rel="external nofollow"><svg class="twitter-icon" focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -81,10 +81,11 @@
     <section class="event">
       <h1 class="event-title">#{{ site.title }}</h1>
       <p class="event-description">{{ site.description }}</p>
-      <!-- <ul class="event-detail">
+      <ul class="event-detail">
         <li class="event-date">{{ site.event-date }}</li>
-        <li class="event-location">Location: Your Place!</li>
-      </ul> -->
+        <li class="event-location">Toronto and Online</li>
+        <li class="register"><a href="#" rel="external nofollow">Buy Tickets</a></li>
+      </ul>
     </section>
     {% endif %}
   </header>
