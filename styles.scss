@@ -450,6 +450,22 @@ article,
     border-radius: 50%;
   }
 }
+.attractions-headshots img {
+  border-radius: 50%;
+  display: block;
+  margin: 1.55em auto 0;
+  width: 12em;
+}
+@media screen and (min-width: 30em) {
+  .attractions-headshots {
+    text-align: center;
+    img {
+      display: inline;
+      margin: 1em 0.75em;
+      width: 10em;
+    }
+  }
+}
 .speaker-detail {
   margin-bottom: 3em;
   min-height: 15em;
