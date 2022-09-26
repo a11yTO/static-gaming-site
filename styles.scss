@@ -452,22 +452,33 @@
      border-radius: 50%;
    }
  }
- .attractions-headshots img {
-   border-radius: 50%;
-   display: block;
-   margin: 1.55em auto 0;
-   width: 12em;
+ .attractions-images {
+  text-align: center;
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  .headshot {
+    border-radius: 50%;
+    margin: 1.55em auto 0;
+    width: 12em;
+  }
  }
  @media screen and (min-width: 30em) {
-   .attractions-headshots {
-     text-align: center;
-     img {
-       display: inline;
-       margin: 1em 0.75em;
-       width: 10em;
-     }
-   }
- }
+   .attractions-images {
+      img {
+        display: inline;
+      }
+      .headshot {
+        margin: 1em 0.75em;
+        width: 10em;
+      }
+      .partner-logo {
+        width: 18em;
+      }
+    }
+  }
  .speaker-detail {
    margin-bottom: 3em;
    min-height: 15em;
