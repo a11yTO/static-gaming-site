@@ -415,6 +415,7 @@
  }
  article,
  .travel,
+ .disclaimer,
  .sponsorships {
    margin: 0 auto;
    padding: 1.5em 5%;
@@ -429,6 +430,7 @@
  @media screen and (min-width: 0) {
    article,
    .travel,
+   .disclaimer,
    .sponsorships {
      width: auto;
      max-width: 55.55em;
