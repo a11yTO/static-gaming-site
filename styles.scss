@@ -452,7 +452,7 @@
      border-radius: 50%;
    }
  }
- .attractions-images {
+ .featured-image {
   text-align: center;
   img {
     display: block;
@@ -466,7 +466,7 @@
   }
  }
  @media screen and (min-width: 30em) {
-   .attractions-images {
+   .featured-image {
       img {
         display: inline;
       }
