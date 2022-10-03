@@ -25,6 +25,7 @@ twitter_username: a11yTO
 
 # Build settings
 markdown: kramdown
+port: 4001
 # theme: minima
 plugins:
   - jekyll-sitemap
