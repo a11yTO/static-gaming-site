@@ -17,7 +17,7 @@ title: a11yTO Gaming
 identifier: gaming
 email: info@a11yto.com
 description: A one day event for Accessible Gaming!
-event-date: Saturday, October 15th, 2022
+event-date: Saturday, October 21st, 2023
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gaming.a11yto.com/" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
